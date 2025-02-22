@@ -1,4 +1,4 @@
-import { Badge, Card, ResultPage, TabBar } from 'antd-mobile';
+import { Badge, Card, Divider, ResultPage, Space, TabBar } from 'antd-mobile';
 import {
   AppOutline,
   MessageFill,
@@ -6,6 +6,7 @@ import {
   UnorderedListOutline,
   UserOutline,
 } from 'antd-mobile-icons';
+import { Link } from 'react-router';
 
 export default function MobileLayout({
   children,
@@ -38,6 +39,13 @@ export default function MobileLayout({
       icon: <UserOutline />,
     },
   ];
+  const linkList = [
+    { title: '首页', to: '/' },
+    { title: '普通路由', to: '/demo' },
+    { title: '动态参数', to: '/good/t-3d5244' },
+    { title: '多层嵌套', to: '/layout/about' },
+    { title: '表单', to: '/form' },
+  ];
   return (
     <>
       <ResultPage
@@ -45,7 +53,19 @@ export default function MobileLayout({
         status="success"
         icon={<AppOutline fontSize={48} />}
       >
-        <Card style={{ height: 'calc(100vh - 160px)' }}>{children}</Card>
+        <Card style={{ height: 'calc(100vh - 160px)' }}>
+          <Space>
+            {linkList.map((item) => (
+              <>
+                <Link key={item.title} color="primary" to={item.to}>
+                  {item.title}
+                </Link>
+                <Divider direction="vertical" />
+              </>
+            ))}
+          </Space>
+          {children}
+        </Card>
       </ResultPage>
       <TabBar
         safeArea

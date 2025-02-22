@@ -1,5 +1,5 @@
-import { Button } from 'antd-mobile';
+import { Result } from 'antd-mobile';
 
 export default function Demo() {
-  return <Button color="primary">demo</Button>;
+  return <Result status="success" icon={<span />} title={<code>/demo</code>} />;
 }

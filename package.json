@@ -1,6 +1,7 @@
 {
   "name": "my-react-router-app",
   "private": true,
+  "author": "silvmind <84339706@qq.com>",
   "type": "module",
   "scripts": {
     "build": "react-router build",

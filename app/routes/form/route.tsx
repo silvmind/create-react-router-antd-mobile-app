@@ -11,7 +11,7 @@ export default function FormDemo() {
         <Form.Item label="短信验证码">
           <Input placeholder="请输入" />
         </Form.Item>
-        <Form.Header />
+        <Form.Header>基础信息</Form.Header>
         <Form.Item label="姓名">
           <Input placeholder="请输入" />
         </Form.Item>
