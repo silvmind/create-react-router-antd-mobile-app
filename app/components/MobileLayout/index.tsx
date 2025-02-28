@@ -49,7 +49,7 @@ export default function MobileLayout({
   return (
     <>
       <ResultPage
-        title="演示DEMO"
+        title="react-router v7 + antd-mobile v5 演示DEMO"
         status="success"
         icon={<AppOutline fontSize={48} />}
       >
